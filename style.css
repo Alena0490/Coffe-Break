@@ -1,0 +1,128 @@
+
+:root {
+    --text-primary: #0D0000;
+    --text-invert: #fffafa;
+    --text-secondary: #260101;
+    --text-secondary-invert: #ffeaeb;
+    --primary-color: #401E01;
+    --secondary-color: #06d1ff;
+    --ternary-color: #fca934;
+    --background-color: #F2EEEB;
+    --box-color: #D9D6D0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    position: relative;
+    height: 100svh;
+    /* font-family: "Special Elite", system-ui;
+    font-family: "Julius Sans One", sans-serif; */
+    font-family: "Coming Soon","Arial Narrow",cursive;
+    line-height: 1.4;
+}
+
+.welcome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+    background: url(img/dark-chic-espresso-urban-cafe-dreams-cafe-bar-black.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.svg-text {
+    width: 50%;
+    height: auto;
+    max-width: 500px;
+    min-width: 260px;
+    display: block;
+    padding: 2rem;
+    margin-left: 1rem;
+}
+
+.letter {
+    color: #b3b4b6;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-linejoin: bevel;
+    opacity: 0.9; 
+    filter: blur(0.7px) url(#chalkNoise);
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    background: rgba(0,0,0,0.7);
+    border-top: 2px solid var(--ternary-color); 
+    color: var(--text-invert);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+    z-index: 2;
+}
+
+footer.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+footer a {
+    color: var(--text-secondary-invert-invert);
+    cursor: pointer;
+    transition: all 0.4s ease-out;
+    /* line-height: 1; */
+    vertical-align: middle;
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: var(--ternary-color);
+}
+
+footer a:hover .icon {
+    color: var(--text-secondary-invert);
+}
+
+.contacts, .socials {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts, .socials {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.icon {
+    margin-right: 0.5rem;
+    transition: color 0.3s ease-out; 
+}
+
+
+
+
+
