@@ -31,6 +31,33 @@ body {
     line-height: 1.4;
 }
 
+header {
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.6s ease-out;
+}
+
+header.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.logo {
+    color: var(--ternary-color);
+    text-decoration: none;
+    font-size: 1.7rem;
+    filter: drop-shadow(1px 1px 4px black);
+}
+
 .welcome {
     display: flex;
     justify-content: center;
@@ -40,6 +67,10 @@ body {
     background: url(img/dark-chic-espresso-urban-cafe-dreams-cafe-bar-black.jpg);
     background-size: cover;
     background-position: center center;
+}
+
+h2 {
+    text-indent: -9000px;
 }
 
 .svg-text {

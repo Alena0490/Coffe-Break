@@ -1,14 +1,14 @@
 const letters = document.querySelectorAll(".letter");
 
 letters.forEach((letter, index) => {
-  const length = letter.getTotalLength();
+    const length = letter.getTotalLength();
 
-   letter.style.transition = "none"; 
+    letter.style.transition = "none"; 
 
-  letter.style.strokeDasharray = length + "px";
-  letter.style.strokeDashoffset = length + "px";
+    letter.style.strokeDasharray = length + "px";
+    letter.style.strokeDashoffset = length + "px";
 
- // přidáno – obal pro spuštění animace až po vykreslení výchozího stavu
+ // Timeout
     setTimeout(() => {
         letters.forEach((letter, index) => {
             setTimeout(() => {
@@ -18,8 +18,11 @@ letters.forEach((letter, index) => {
         });
     }, 50);
 
-  console.log(`Letter ${index + 1}:`, letter, "Length:", length);
-  setTimeout(() => {
-  document.querySelector("footer").classList.add("show");
-}, letters.length * 1000); 
+    setTimeout(() => {
+        document.querySelector("footer").classList.add("show");
+    }, letters.length * 1100); 
+
+    setTimeout(() => {
+        document.querySelector("header").classList.add("show");
+    }, letters.length * 1000); 
 });
